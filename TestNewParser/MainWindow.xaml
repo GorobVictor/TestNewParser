@@ -1,0 +1,30 @@
+﻿<Window x:Class="TestNewParser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestNewParser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="listview_Viewer" Margin="20,60,20,20" MouseDoubleClick="listview_Viewer_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" Width="80" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Title" Width="100" DisplayMemberBinding="{Binding Title}" />
+                    <GridViewColumn Header="ArtistId" Width="100" DisplayMemberBinding="{Binding ArtistId}" />
+                    <GridViewColumn Header="Artist" Width="100" DisplayMemberBinding="{Binding Artist}" />
+                    <GridViewColumn Header="AlbumId" Width="100" DisplayMemberBinding="{Binding AlbumId}" />
+                    <GridViewColumn Header="Album" Width="100" DisplayMemberBinding="{Binding Album}" />
+                    <GridViewColumn Header="Duration" Width="50" DisplayMemberBinding="{Binding Duration}" />
+                    <GridViewColumn Header="Image" Width="100" DisplayMemberBinding="{Binding ImageLink}" />
+                    <GridViewColumn Header="Description" Width="100" DisplayMemberBinding="{Binding Description}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="txt_Search" HorizontalAlignment="Stretch" Margin="20,10,150,0" Text="https://www.langitmusik.co.id/new/playlist/6852650" TextWrapping="Wrap" VerticalAlignment="Top" Height="20"/>
+        <Button x:Name="btn_Go" Content="Button" HorizontalAlignment="Right" Margin="0,10,20,0" VerticalAlignment="Top" Width="120" Click="btn_Go_Click"/>
+        <Label x:Name="txt_NameArtist" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,35,0,0"/>
+        <Label x:Name="txt_NameAlbumOrPlaylist" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,35,0,0"/>
+    </Grid>
+</Window>

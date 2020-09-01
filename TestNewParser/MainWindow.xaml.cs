@@ -21,6 +21,7 @@ namespace TestNewParser {
                 listview_Viewer.ItemsSource = playlist.AllTracks;
                 txt_NameArtist.Content = playlist.Artist;
                 txt_NameAlbumOrPlaylist.Content = playlist.Title;
+                txt_Url.Content = playlist.ImageLink;
             }
             else if (txt_Search.Text.IndexOf("album") != -1) {
                 var album = (Album)await new ParsAlbum().GetObject(
@@ -28,6 +29,7 @@ namespace TestNewParser {
                 listview_Viewer.ItemsSource = album.AllTracks;
                 txt_NameArtist.Content = album.Artist;
                 txt_NameAlbumOrPlaylist.Content = album.Title;
+                txt_Url.Content = album.ImageLink;
             }
             btn_Go.IsEnabled = true;
         }
